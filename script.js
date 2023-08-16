@@ -77,24 +77,41 @@ function game(playerChoice){
     let computerScore = document.querySelector('.scoreComputer');
     let playerScore = document.querySelector('.scorePlayer');
     let Rounds = document.querySelector('.rounds');
+    const status = document.querySelector('.roundStatus');
+
     if(rounds > 9){
         if(scoreComputer > scorePlayer){
             alert("Computer wins!");
-            scoreComputer=0;
-            scorePlayer=0;
+            computerScore.textContent = 0;
+            scoreComputer = 0;
+            playerScore.textContent = 0;
+            scorePlayer = 0;
             rounds = 0;
+            Rounds.textContent = 0;
+            status.textContent = "--Pick a weapon!--";
+            return;
         }
         else if(scoreComputer === scorePlayer){
             alert("It'a tie!");
-            scoreComputer=0;
-            scorePlayer=0;
+            computerScore.textContent = 0;
+            scoreComputer = 0;
+            playerScore.textContent = 0;
+            scorePlayer = 0;
             rounds = 0;
+            Rounds.textContent = 0;
+            status.textContent = "--Pick a weapon!--";
+            return;
         }
         else {
             alert("Player wins!");
-            scoreComputer=0;
-            scorePlayer=0;
+            computerScore.textContent = 0;
+            scoreComputer = 0;
+            playerScore.textContent = 0;
+            scorePlayer = 0;
+            Rounds.textContent = 0;
             rounds = 0;
+            status.textContent = "--Pick a weapon!--";
+            return;
         }
     
     }
